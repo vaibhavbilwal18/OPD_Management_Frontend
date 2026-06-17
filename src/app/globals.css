@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+}
+
+@layer components {
+  .section-card {
+    @apply bg-white rounded-xl border border-gray-200 shadow-sm;
+  }
+  .section-header {
+    @apply flex items-center justify-between px-5 py-4 border-b border-gray-100;
+  }
+  .section-title {
+    @apply text-sm font-semibold text-gray-800 uppercase tracking-wide;
+  }
+  .section-body {
+    @apply p-5;
+  }
+  .form-row {
+    @apply grid gap-3;
+  }
+  .input-label {
+    @apply block text-xs font-medium text-gray-600 mb-1;
+  }
+  .input-field {
+    @apply w-full rounded-lg border border-gray-300 px-3 py-2 text-sm text-gray-900 placeholder-gray-400
+           focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent
+           disabled:bg-gray-50 disabled:text-gray-500 disabled:cursor-not-allowed;
+  }
+  .select-field {
+    @apply input-field appearance-none bg-white cursor-pointer;
+  }
+  .textarea-field {
+    @apply input-field resize-none;
+  }
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-lg bg-primary-600 px-4 py-2 text-sm font-semibold text-white
+           shadow-sm hover:bg-primary-700 active:bg-primary-800 transition-colors
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700
+           shadow-sm hover:bg-gray-50 active:bg-gray-100 transition-colors
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-danger {
+    @apply inline-flex items-center gap-2 rounded-lg bg-red-50 px-3 py-1.5 text-sm font-medium text-red-600
+           hover:bg-red-100 active:bg-red-200 transition-colors
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-sm font-medium text-gray-600
+           hover:bg-gray-100 transition-colors;
+  }
+}
+
+@media print {
+  .no-print { display: none !important; }
+  .print-only { display: block !important; }
+}
